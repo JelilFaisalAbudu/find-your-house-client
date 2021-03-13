@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import axios from 'axios';
 
 const API_URL = 'http:// localhost:8080/api/v1/';
@@ -9,7 +10,7 @@ const login = (email, password) => axios
   })
   .then(response => {
     if (response.data.auth_token) {
-      localStorage.setItem('user', JSON.stringify(response.data));
+      localStorage.setItem('user', JSON.stringify(response.data.auth_token));
     }
     return response.data;
   });
