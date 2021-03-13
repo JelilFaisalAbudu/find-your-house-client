@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 
-const API_URL = 'http:// localhost:8080/api/v1/';
+const API_URL = 'http:// localhost:3000/api/v1/';
 
 const login = (email, password) => axios
   .post(`${API_URL}auth/login`, {
