@@ -50,6 +50,7 @@ export const register = (name,
     response => {
       dispatch({
         type: REGISTER_SUCCESS,
+        payload: { user: response },
       });
 
       dispatch({
