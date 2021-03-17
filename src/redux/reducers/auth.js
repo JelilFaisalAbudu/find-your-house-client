@@ -8,17 +8,18 @@ import {
 
 const user = JSON.parse(localStorage.getItem('user'));
 
-const initialstate = user
-  ? { isLoggedIn: true, user }
-  : { isLoggedIn: false, user: null };
+const initialState = user
+  ? { isLoggedIn: true, user, loading: true }
+  : { isLoggedIn: false, user: null, loading: true };
 
-const authReducer = (state = initialstate, action) => {
+const authReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case REGISTER_SUCCESS:
       return {
         ...state,
-        isLoggedIn: false,
+        isLoggedIn: true,
+        user: payload.user,
       };
 
     case REGISTER_FAIL:
