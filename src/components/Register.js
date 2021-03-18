@@ -42,6 +42,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
+  const [loading, setLoading] = useState(false);
   const [successful, setSuccessful] = useState(false);
   const { isLoggedIn } = useSelector(state => state.auth);
 
@@ -71,6 +72,7 @@ const Register = () => {
   const handleRegister = e => {
     e.preventDefault();
 
+    setLoading(true);
     setSuccessful(false);
 
     form.current.validateAll();
@@ -83,7 +85,10 @@ const Register = () => {
         })
         .catch(() => {
           setSuccessful(false);
+          setLoading(false);
         });
+    } else {
+      setLoading(false);
     }
   };
 
@@ -152,7 +157,12 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-primary btn-block">Sign Up</button>
+                <button className="btn btn-primary btn-block" disabled={loading}>
+                  {loading && (
+                  <span className="spinner-border spinner-border-sm" />
+                  )}
+                  <span>Sign Up</span>
+                </button>
               </div>
             </div>
           )}
