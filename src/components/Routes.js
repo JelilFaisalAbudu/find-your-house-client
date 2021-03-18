@@ -10,7 +10,7 @@ import {
 
 import history from '../helpers/history';
 import { logout } from '../redux/actions/auth';
-import clearMessage from '../redux/actions/message';
+import message from '../redux/actions/message';
 
 import Login from './Login';
 import Register from './Register';
@@ -24,7 +24,7 @@ const Routes = () => {
 
   useEffect(() => {
     history.listen(() => {
-      dispatch(clearMessage()); // clear message when changing location
+      dispatch(message.clearMessage()); // clear message when changing location
     });
   }, [dispatch]);
 

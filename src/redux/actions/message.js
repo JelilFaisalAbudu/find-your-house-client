@@ -5,11 +5,11 @@ const setMessage = message => ({
   payload: message,
 });
 
-const clearmessage = () => ({ type: CLEAR_MESSAGE });
+const clearMessage = () => ({ type: CLEAR_MESSAGE });
 
 const message = {
   setMessage,
-  clearmessage,
+  clearMessage,
 };
 
 export default message;
