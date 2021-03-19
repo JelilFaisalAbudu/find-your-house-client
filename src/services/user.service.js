@@ -9,14 +9,29 @@ const getUserboard = userId => (
   axios.get(`${API_URL}users/${userId}/favorites`, { headers: authHeader() })
 );
 
-const getUserFavorites = userId => (
+const getUserFavorite = userId => (
   axios.get(`${API_URL}users/${userId}/favorites`, { headers: authHeader() })
 );
+
+const addUserFavorite = async (userId, houseId) => {
+  const response = await axios
+    .post(`${API_URL}users/${userId}/favorites`,
+      { house_id: houseId },
+      { headers: authHeader() });
+
+  return response.data;
+};
+
+const removeUserFavorite = (userId, favoriteId) => {
+  axios.delete(`${API_URL}users/${userId}/favorites/${favoriteId}`, { headers: authHeader() });
+};
 
 const userServices = {
   getPublicContent,
   getUserboard,
-  getUserFavorites,
+  getUserFavorite,
+  addUserFavorite,
+  removeUserFavorite,
 };
 
 export default userServices;
