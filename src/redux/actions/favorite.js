@@ -46,8 +46,8 @@ const removeUserFavorite = (
   userId,
   houseId,
 ).then(
-  data => {
-    dispatch(doRemoveFavorite(data));
+  () => {
+    dispatch(doRemoveFavorite(houseId));
 
     return Promise.resolve();
   },
