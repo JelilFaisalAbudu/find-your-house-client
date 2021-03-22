@@ -1,7 +1,8 @@
 import { ADD_FAVORITE, REMOVE_FAVORITE } from '../actions/types';
 
 const initialState = {
-  favorites: [],
+  favoriteHouses: [],
+  favoriteHousesIds: [],
 };
 
 const favoritesReducer = (state = initialState, action) => {
@@ -11,11 +12,19 @@ const favoritesReducer = (state = initialState, action) => {
     case ADD_FAVORITE:
       return {
         ...state,
-        favorites: [...state.favorites, payload.house],
+        favoriteHouses: [...state.favoriteHouses, payload.house],
+        favoriteHousesIds: [...state.favoriteHousesIds, payload.house.id],
       };
 
     case REMOVE_FAVORITE:
-      return state.filter(house => house.id !== payload.houseId);
+      return {
+        ...state,
+        favoriteHouses: state.favoriteHouses
+          .filter(house => house.id !== payload.houseId),
+
+        favoriteHousesIds: state.favoriteHousesIds
+          .filter(houseId => houseId !== payload.houseId),
+      };
 
     default:
       return state;
