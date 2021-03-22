@@ -9,11 +9,16 @@ import userFavorites from '../redux/actions/favorite';
 const Home = () => {
   const dispatch = useDispatch();
   const { user } = useSelector(state => state.auth);
+  const { favoriteHousesIds } = useSelector(state => state.favorites);
   const [houses, setHouses] = useState([]);
   const [networkError, setError] = useState('');
 
   const handleAddFavorite = (userId, houseId) => {
     dispatch(userFavorites.addUserFavorite(userId, houseId));
+  };
+
+  const handleRemoveFavorite = (userId, houseId) => {
+    dispatch(userFavorites.removeUserFavorite(userId, houseId));
   };
 
   useEffect(() => {
@@ -30,6 +35,30 @@ const Home = () => {
       },
     );
   }, []);
+
+  const displayFavoriteBtn = houseId => {
+    if (favoriteHousesIds.includes(houseId)) {
+      return (
+        <button
+          type="button"
+          className="card-text"
+          onClick={() => handleRemoveFavorite(user.id, houseId)}
+        >
+          <small className="text-muted">unlike</small>
+        </button>
+      );
+    }
+
+    return (
+      <button
+        type="button"
+        className="card-text"
+        onClick={() => handleAddFavorite(user.id, houseId)}
+      >
+        <small className="text-muted">like</small>
+      </button>
+    );
+  };
 
   let content;
 
@@ -49,13 +78,7 @@ const Home = () => {
               <h5 className="card-title">{house.name}</h5>
               <h5 className="card-title">{house.category}</h5>
               <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <button
-                type="button"
-                className="card-text"
-                onClick={() => handleAddFavorite(user.id, house.id)}
-              >
-                <small className="text-muted">like</small>
-              </button>
+              {displayFavoriteBtn(house.id)}
             </div>
           </div>
         )))
