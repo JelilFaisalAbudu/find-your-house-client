@@ -13,6 +13,9 @@ const Home = () => {
   const [houses, setHouses] = useState([]);
   const [networkError, setError] = useState('');
 
+  const getUserFavorites = userId => {
+    dispatch(userFavorites.getUserFavorites(userId));
+  };
   const handleAddFavorite = (userId, houseId) => {
     dispatch(userFavorites.addUserFavorite(userId, houseId));
   };
@@ -35,6 +38,12 @@ const Home = () => {
       },
     );
   }, []);
+
+  useEffect(() => {
+    if (user) {
+      getUserFavorites(user.id);
+    }
+  }, [getUserFavorites]);
 
   const displayFavoriteBtn = houseId => {
     if (favoriteHousesIds.includes(houseId)) {

@@ -1,5 +1,19 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE, SET_MESSAGE } from './types';
+import {
+  GET_FAVORITES,
+  ADD_FAVORITE,
+  REMOVE_FAVORITE,
+  SET_MESSAGE,
+} from './types';
 import userServices from '../../services/user.service';
+
+const getUserFavorites = userId => dispatch => {
+  userServices.getUserFavorites(userId).then(data => {
+    dispatch({
+      type: GET_FAVORITES,
+      payload: { favorites: data },
+    });
+  });
+};
 
 const doAddFavorite = house => ({
   type: ADD_FAVORITE,
@@ -68,6 +82,7 @@ const removeUserFavorite = (
 );
 
 const userFavorites = {
+  getUserFavorites,
   addUserFavorite,
   removeUserFavorite,
 };
