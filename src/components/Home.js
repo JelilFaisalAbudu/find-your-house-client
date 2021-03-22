@@ -23,6 +23,7 @@ const Home = () => {
 
   const handleRemoveFavorite = (userId, houseId) => {
     dispatch(userFavorites.removeUserFavorite(userId, houseId));
+    dispatch(userFavorites.doRemoveFavorite(houseId));
   };
 
   useEffect(() => {

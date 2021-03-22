@@ -85,6 +85,7 @@ const userFavorites = {
   getUserFavorites,
   addUserFavorite,
   removeUserFavorite,
+  doRemoveFavorite,
 };
 
 export default userFavorites;

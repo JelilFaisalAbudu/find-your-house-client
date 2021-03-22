@@ -29,7 +29,7 @@ const favoritesReducer = (state = initialState, action) => {
       return {
         ...state,
         favoriteHouses: state.favoriteHouses
-          .filter(house => house.house_id !== payload.houseId),
+          .filter(house => house.id !== payload.houseId),
 
         favoriteHousesIds: state.favoriteHousesIds
           .filter(houseId => houseId !== payload.houseId),
