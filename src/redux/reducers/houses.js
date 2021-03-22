@@ -1,7 +1,21 @@
+import { GET_HOUSES } from '../actions/types';
+
 const initialState = {
   houses: [],
 };
+const housesReducer = (state = initialState, action) => {
+  const { type, payload } = action;
 
-const housesReducer = (state = initialState) => state;
+  switch (type) {
+    case GET_HOUSES:
+      return {
+        ...state,
+        houses: payload.houses.data,
+      };
+
+    default:
+      return state;
+  }
+};
 
 export default housesReducer;

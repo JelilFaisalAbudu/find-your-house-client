@@ -1,17 +1,18 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import userService from '../services/user.service';
+// import userService from '../services/user.service';
 import houseImage from '../images/scott-webb-1ddol8rgUH8-unsplash.jpg';
 import userFavorites from '../redux/actions/favorite';
+import getHouses from '../redux/actions/houses';
 
 const Home = () => {
   const dispatch = useDispatch();
   const { user } = useSelector(state => state.auth);
   const { favoriteHousesIds } = useSelector(state => state.favorites);
-  const [houses, setHouses] = useState([]);
-  const [networkError, setError] = useState('');
+  const { houses } = useSelector(state => state.houses);
+  const { networkErrorMessage } = useSelector(state => state.message);
 
   const getUserFavorites = userId => {
     dispatch(userFavorites.getUserFavorites(userId));
@@ -25,25 +26,14 @@ const Home = () => {
   };
 
   useEffect(() => {
-    userService.getPublicContent().then(
-      response => {
-        setHouses(response.data);
-      },
-      error => {
-        const errorResponse = (error.response && error.response.data)
-          || error.message
-          || error.toString();
-
-        setError(errorResponse);
-      },
-    );
+    dispatch(getHouses());
   }, []);
 
   useEffect(() => {
     if (user) {
       getUserFavorites(user.id);
     }
-  }, [getUserFavorites]);
+  }, []);
 
   const displayFavoriteBtn = houseId => {
     if (favoriteHousesIds.includes(houseId)) {
@@ -71,10 +61,10 @@ const Home = () => {
 
   let content;
 
-  if (networkError) {
+  if (networkErrorMessage) {
     content = (
       <header className="jumbotron">
-        <h4>{networkError}</h4>
+        <h4>{networkErrorMessage}</h4>
       </header>
     );
   } else {
