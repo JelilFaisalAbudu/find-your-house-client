@@ -9,9 +9,13 @@ const getUserboard = userId => (
   axios.get(`${API_URL}users/${userId}/favorites`, { headers: authHeader() })
 );
 
-const getUserFavorite = userId => (
-  axios.get(`${API_URL}users/${userId}/favorites`, { headers: authHeader() })
-);
+const getUserFavorite = async userId => {
+  const response = await axios
+    .get(`${API_URL}users/${userId}/favorites`,
+      { headers: authHeader() });
+
+  return response.data;
+};
 
 const addUserFavorite = async (userId, houseId) => {
   const response = await axios
@@ -22,8 +26,16 @@ const addUserFavorite = async (userId, houseId) => {
   return response.data;
 };
 
-const removeUserFavorite = (userId, favoriteId) => {
-  axios.delete(`${API_URL}users/${userId}/favorites/${favoriteId}`, { headers: authHeader() });
+const removeUserFavorite = async (userId, houseId) => {
+  const favorites = await getUserFavorite(userId);
+  const favorite = favorites.find(favorite => favorite.house_id === houseId);
+  const response = await axios({
+    method: 'delete',
+    url: `${API_URL}users/${userId}/favorites/${favorite.id}`,
+    headers: authHeader(),
+  });
+
+  return response.data;
 };
 
 const userServices = {
