@@ -1,8 +1,7 @@
-/* eslint-disable no-underscore-dangle */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import history from '../helpers/history';
 
-// import userService from '../services/user.service';
 import houseImage from '../images/scott-webb-1ddol8rgUH8-unsplash.jpg';
 import userFavorites from '../redux/actions/favorite';
 import getHouses from '../redux/actions/houses';
@@ -10,6 +9,7 @@ import getHouses from '../redux/actions/houses';
 const Home = () => {
   const dispatch = useDispatch();
   const { user } = useSelector(state => state.auth);
+  const { isLoggedIn } = useSelector(state => state.auth);
   const { favoriteHousesIds } = useSelector(state => state.favorites);
   const { houses } = useSelector(state => state.houses);
   const { networkErrorMessage } = useSelector(state => state.message);
@@ -17,6 +17,7 @@ const Home = () => {
   const getUserFavorites = userId => {
     dispatch(userFavorites.getUserFavorites(userId));
   };
+
   const handleAddFavorite = (userId, houseId) => {
     dispatch(userFavorites.addUserFavorite(userId, houseId));
   };
@@ -25,6 +26,8 @@ const Home = () => {
     dispatch(userFavorites.removeUserFavorite(userId, houseId));
     dispatch(userFavorites.doRemoveFavorite(houseId));
   };
+
+  const changeRoute = (path = '/login') => history.replace(`${path}`);
 
   useEffect(() => {
     dispatch(getHouses());
@@ -53,7 +56,12 @@ const Home = () => {
       <button
         type="button"
         className="card-text"
-        onClick={() => handleAddFavorite(user.id, houseId)}
+        onClick={() => {
+          if (!isLoggedIn) {
+            return changeRoute('/login');
+          }
+          return handleAddFavorite(user.id, houseId);
+        }}
       >
         <small className="text-muted">like</small>
       </button>
