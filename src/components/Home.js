@@ -40,7 +40,7 @@ const Home = () => {
   }, []);
 
   const displayFavoriteBtn = houseId => {
-    if (favoriteHousesIds.includes(houseId)) {
+    if (isLoggedIn && favoriteHousesIds.includes(houseId)) {
       return (
         <button
           type="button"
