@@ -22,14 +22,14 @@ const favoritesReducer = (state = initialState, action) => {
       return {
         ...state,
         favoriteHouses: [...state.favoriteHouses, payload.house],
-        favoriteHousesIds: [...state.favoriteHousesIds, payload.house.id],
+        favoriteHousesIds: [...state.favoriteHousesIds, payload.house.house_id],
       };
 
     case REMOVE_FAVORITE:
       return {
         ...state,
         favoriteHouses: state.favoriteHouses
-          .filter(house => house.id !== payload.houseId),
+          .filter(house => house.house_id !== payload.houseId),
 
         favoriteHousesIds: state.favoriteHousesIds
           .filter(houseId => houseId !== payload.houseId),
