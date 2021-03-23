@@ -6,8 +6,6 @@ import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/store';
 
-console.log('Logging store...');
-console.log(store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
