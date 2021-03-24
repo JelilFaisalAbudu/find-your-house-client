@@ -10,7 +10,7 @@ const housesReducer = (state = initialState, action) => {
     case GET_HOUSES:
       return {
         ...state,
-        houses: [...state.houses, ...payload.houses],
+        houses: payload.houses,
       };
 
     default:
