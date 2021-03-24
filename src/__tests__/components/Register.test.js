@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import '../setups/setupTests';
+import '../../setups/setupTests';
 import Register from '../../components/Register';
 import store from '../../redux/store';
 

@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import '../setups/setupTests';
+import '../../setups/setupTests';
 import App from '../../components/app/App';
 import store from '../../redux/store';
 
