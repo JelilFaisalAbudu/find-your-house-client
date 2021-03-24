@@ -44,7 +44,7 @@ const Home = () => {
       return (
         <button
           type="button"
-          className="card-text"
+          className="card-text btn btn-unlike"
           onClick={() => handleRemoveFavorite(user.id, houseId)}
         >
           <small className="text-muted">unlike</small>
@@ -55,7 +55,7 @@ const Home = () => {
     return (
       <button
         type="button"
-        className="card-text"
+        className="card-text btn btn-like"
         onClick={() => {
           if (!isLoggedIn) {
             return changeRoute('/login');
@@ -83,8 +83,8 @@ const Home = () => {
           <div key={house.id} className="card mb-3">
             <img className="card-img-top" src={houseImage} alt={house.name} />
             <div className="card-body">
-              <h5 className="card-title">{house.name}</h5>
-              <h5 className="card-title">{house.category}</h5>
+              <h5 className="card-title house-name">{house.name}</h5>
+              <h5 className="card-title house-category">{house.category}</h5>
               <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               {displayFavoriteBtn(house.id)}
             </div>
@@ -95,7 +95,7 @@ const Home = () => {
   }
 
   return (
-    <div className="">
+    <div className="houses-container">
       {content}
     </div>
   );
