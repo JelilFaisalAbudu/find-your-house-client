@@ -2,10 +2,10 @@ import userServices from '../../services/user.service';
 import { GET_HOUSES, SET_MESSAGE } from './types';
 
 const getHouses = () => dispatch => {
-  userServices.getPublicContent().then(data => {
+  userServices.getPublicContent().then(response => {
     dispatch({
       type: GET_HOUSES,
-      payload: { houses: data },
+      payload: { houses: response.data },
     });
 
     return Promise.resolve();
