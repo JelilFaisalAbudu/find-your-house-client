@@ -161,7 +161,7 @@ const Register = () => {
                   {loading && (
                   <span className="spinner-border spinner-border-sm" />
                   )}
-                  <span>Sign Up</span>
+                  <span className="signup-text">Sign Up</span>
                 </button>
               </div>
             </div>
