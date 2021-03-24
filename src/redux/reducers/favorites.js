@@ -15,8 +15,11 @@ const favoritesReducer = (state = initialState, action) => {
     case GET_FAVORITES:
       return {
         ...state,
-        favoriteHouses: payload.favorites,
-        favoriteHousesIds: favoritesHousesIds(payload.favorites),
+        favoriteHouses: [...state.favoriteHouses, ...payload.favorites],
+        favoriteHousesIds: [
+          ...state.favoriteHousesIds,
+          ...favoritesHousesIds(payload.favorites),
+        ],
       };
     case ADD_FAVORITE:
       return {

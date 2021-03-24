@@ -7,10 +7,10 @@ import {
 import userServices from '../../services/user.service';
 
 const getUserFavorites = userId => dispatch => {
-  userServices.getUserFavorites(userId).then(data => {
+  userServices.getUserFavorites(userId).then(response => {
     dispatch({
       type: GET_FAVORITES,
-      payload: { favorites: data },
+      payload: { favorites: response },
     });
   });
 };
