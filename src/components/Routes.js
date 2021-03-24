@@ -45,14 +45,6 @@ const Routes = () => {
                 Home
               </Link>
             </li>
-
-            {currentUser && (
-              <li className="nav-item">
-                <Link to="/user" className="nav-link">
-                  User
-                </Link>
-              </li>
-            )}
           </div>
 
           {currentUser ? (
@@ -63,7 +55,7 @@ const Routes = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link" onClick={logOut}>
+                <Link to="/logout" className="nav-link" onClick={logOut}>
                   LogOut
                 </Link>
               </li>
