@@ -55,7 +55,7 @@ const FavoritesHouses = () => {
   );
 
   return (
-    <div className="">
+    <div className="houses-container">
       {content}
     </div>
   );
