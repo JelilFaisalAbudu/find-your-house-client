@@ -25,14 +25,14 @@ describe('App', () => {
   });
 
   test('displays a link tag with the login text', () => {
-    const link = wrapper.find('Link')
-      .find({ to: '/login' }).text();
+    const link = wrapper.find('NavLink')
+      .find({ to: '/signin' }).text();
 
-    expect(link).toBe('Login');
+    expect(link).toMatch(/Sign in/i);
   });
 
   test('does not display a link tag with the logout text', () => {
-    const link = wrapper.find('Link')
+    const link = wrapper.find('NavLink')
       .find({ to: '/logout' });
 
     expect(link.length).toEqual(0);
