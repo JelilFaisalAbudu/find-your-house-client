@@ -24,7 +24,7 @@ describe('Login', () => {
   });
 
   test('renders the login form correctly', async () => {
-    const button = await wrapper.find('button.btn-login');
+    const button = await wrapper.find('button.btn-submit');
     expect(button.length).toEqual(1);
   });
 });

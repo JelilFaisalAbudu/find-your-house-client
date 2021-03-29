@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ import CheckButton from 'react-validation/build/button';
 
 import { login } from '../redux/actions/auth';
 import history from '../helpers/history';
+import { spyNoScroll } from '../helpers/dom';
 
 const required = value => {
   if (!value) {
@@ -71,6 +73,8 @@ const Login = () => {
     return <Redirect to="/home" />;
   }
 
+  spyNoScroll();
+
   return (
     <div className="col-md-12">
       <div className="card card-container">
@@ -106,7 +110,7 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-            <button className="btn btn-primary btn-block btn-login" disabled={loading}>
+            <button className="btn btn-primary btn-block btn-submit" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm" />
               )}
