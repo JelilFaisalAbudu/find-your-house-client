@@ -1,3 +1,4 @@
+// "use-state-if-mounted": "^1.0.4"
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/button-has-type */
@@ -11,8 +12,8 @@ import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
 import { isEmail } from 'validator';
 import history from '../helpers/history';
-
 import { register } from '../redux/actions/auth';
+import { spyNoScroll } from '../helpers/dom';
 
 const required = value => {
   if (!value) {
@@ -96,6 +97,8 @@ const Register = () => {
     return <Redirect to="/home" />;
   }
 
+  spyNoScroll();
+
   return (
     <div className="col-md-12">
       <div className="card card-container">
@@ -157,7 +160,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-primary btn-block" disabled={loading}>
+                <button className="btn b btn-primary btn-block" disabled={loading}>
                   {loading && (
                   <span className="spinner-border spinner-border-sm" />
                   )}
