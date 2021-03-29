@@ -27,7 +27,7 @@ describe('Routes/Navbar', () => {
     let navLinks;
 
     beforeAll(() => {
-      navLinks = wrapper.find('Link');
+      navLinks = wrapper.find('NavLink');
     });
 
     test('does not display the logout link with text Logout', () => {
@@ -35,11 +35,11 @@ describe('Routes/Navbar', () => {
     });
 
     test('renders the login-in link with text Login', () => {
-      expect(navLinks.find({ to: '/login' }).text()).toMatch(/Login/i);
+      expect(navLinks.find({ to: '/signin' }).text()).toMatch(/Sign in/i);
     });
 
     test('renders the sign-up link with text Signup', () => {
-      expect(navLinks.find({ to: '/register' }).text()).toMatch(/Sign Up/i);
+      expect(navLinks.find({ to: '/register' }).text()).toMatch(/Sign up/i);
     });
   });
 
@@ -59,7 +59,7 @@ describe('Routes/Navbar', () => {
     beforeAll(() => {
       store.dispatch(registerAction(user));
       wrapper = setup();
-      navLinks = wrapper.find('Link');
+      navLinks = wrapper.find('NavLink');
     });
 
     test('does not display the login link with text Login', () => {
@@ -75,7 +75,7 @@ describe('Routes/Navbar', () => {
     });
 
     test('renders the nav link for the logged-in user to log out', () => {
-      expect(navLinks.find({ to: '/logout' }).text()).toMatch(/Logout/i);
+      expect(navLinks.find({ to: '/logout' }).text()).toMatch(/Sign out/i);
     });
   });
 });

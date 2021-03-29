@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes/Navbar renders the Sign-up page without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Routes>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <header
+        className="site-header site-header--bg"
+      >
+        <nav
+          className="navbar navbar-expand-lg navbar-light py-0"
+        >
+          <div
+            className="container-fluid"
+          >
+            <NavLink
+              className="navbar-brand"
+              to="/"
+            >
+              <Link
+                aria-current="page"
+                className="navbar-brand active"
+                style={Object {}}
+                to={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": null,
+                  }
+                }
+              >
+                <LinkAnchor
+                  aria-current="page"
+                  className="navbar-brand active"
+                  href="/"
+                  navigate={[Function]}
+                  style={Object {}}
+                >
+                  <a
+                    aria-current="page"
+                    className="navbar-brand active"
+                    href="/"
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    <img
+                      alt="Elocom Homes Brand Logo"
+                      className="brand-logo img-fluid"
+                      src="elcom1.png"
+                    />
+                  </a>
+                </LinkAnchor>
+              </Link>
+            </NavLink>
+            <button
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              className="navbar-toggler"
+              data-bs-target="#navbarSupportedContent"
+              data-bs-toggle="collapse"
+              type="button"
+            >
+              <span
+                className="navbar-toggler-icon"
+              />
+            </button>
+            <div
+              className="collapse navbar-collapse justify-content-end"
+              id="navbarSupportedContent"
+            >
+              <ul
+                className="navbar-nav mb-2 mb-lg-0 align-items-baseline"
+              >
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="nav-link"
+                  to="/home"
+                >
+                  <Link
+                    aria-current={null}
+                    className="nav-link"
+                    to={
+                      Object {
+                        "hash": "",
+                        "pathname": "/home",
+                        "search": "",
+                        "state": null,
+                      }
+                    }
+                  >
+                    <LinkAnchor
+                      aria-current={null}
+                      className="nav-link"
+                      href="/home"
+                      navigate={[Function]}
+                    >
+                      <a
+                        aria-current={null}
+                        className="nav-link"
+                        href="/home"
+                        onClick={[Function]}
+                      >
+                        Home
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </NavLink>
+                <li
+                  className="nav-item"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    className="nav-link"
+                    to="/signin"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="nav-link"
+                      to={
+                        Object {
+                          "hash": "",
+                          "pathname": "/signin",
+                          "search": "",
+                          "state": null,
+                        }
+                      }
+                    >
+                      <LinkAnchor
+                        aria-current={null}
+                        className="nav-link"
+                        href="/signin"
+                        navigate={[Function]}
+                      >
+                        <a
+                          aria-current={null}
+                          className="nav-link"
+                          href="/signin"
+                          onClick={[Function]}
+                        >
+                          Sign in
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </NavLink>
+                </li>
+                <li
+                  className="nav-item"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    className="nav-link"
+                    to="/register"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="nav-link"
+                      to={
+                        Object {
+                          "hash": "",
+                          "pathname": "/register",
+                          "search": "",
+                          "state": null,
+                        }
+                      }
+                    >
+                      <LinkAnchor
+                        aria-current={null}
+                        className="nav-link"
+                        href="/register"
+                        navigate={[Function]}
+                      >
+                        <a
+                          aria-current={null}
+                          className="nav-link"
+                          href="/register"
+                          onClick={[Function]}
+                        >
+                          Sign up
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div
+          className="components-wrapper"
+        >
+          <Switch>
+            <Route
+              component={[Function]}
+              computedMatch={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              exact={true}
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              path={
+                Array [
+                  "/",
+                  "/home",
+                  "/logout",
+                ]
+              }
+            >
+              <Home
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <div
+                  className="hero position-relative overflow-hidden p-3 p-md-5 text-center bg-light"
+                >
+                  <div
+                    className="hero-text col-md-5 p-lg-5 mx-auto my-5"
+                  >
+                    <h1
+                      className="display-4 fw-normal"
+                    >
+                      Punny headline
+                    </h1>
+                    <p
+                      className="lead fw-normal"
+                    >
+                      A landing page to boot. Jumpstart your marketing efforts with this example based on  marketing pages.
+                    </p>
+                    <a
+                      className="btn btn-outline-secondary"
+                      to="#"
+                    >
+                      Coming soon
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="container-fluid"
+                >
+                  <div
+                    className="houses-container py-2 py-md-4 row g-3"
+                  >
+                    0
+                  </div>
+                </div>
+              </Home>
+            </Route>
+          </Switch>
+        </div>
+      </main>
+      <footer
+        className="footer"
+      >
+        <div
+          className="container-fluid footer-inner-wrapper"
+        >
+          <p
+            className="developed-by"
+          >
+            Developed by
+            <span
+              className="name"
+            >
+               Jelil Abudu
+            </span>
+          </p>
+          <div
+            className="footer__social"
+          >
+            <Link
+              aria-label="github link"
+              className="footer-icons"
+              rel="noreferrer"
+              target="_blank"
+              to="https://github.com/JelilFaisalAbudu"
+            >
+              <LinkAnchor
+                aria-label="github link"
+                className="footer-icons"
+                href="/https://github.com/JelilFaisalAbudu"
+                navigate={[Function]}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <a
+                  aria-label="github link"
+                  className="footer-icons"
+                  href="/https://github.com/JelilFaisalAbudu"
+                  onClick={[Function]}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fab fa-github"
+                  />
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              aria-label="linkedIn link"
+              className="footer-icons"
+              rel="noreferrer"
+              target="_blank"
+              to="https://www.linkedin.com/in/jelilfaisalabudu/"
+            >
+              <LinkAnchor
+                aria-label="linkedIn link"
+                className="footer-icons"
+                href="/https://www.linkedin.com/in/jelilfaisalabudu/"
+                navigate={[Function]}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <a
+                  aria-label="linkedIn link"
+                  className="footer-icons"
+                  href="/https://www.linkedin.com/in/jelilfaisalabudu/"
+                  onClick={[Function]}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fab fa-linkedin-in"
+                  />
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              aria-label="twitter link"
+              className="footer-icons"
+              rel="noreferrer"
+              target="_blank"
+              to="https://twitter.com/jelilabudu"
+            >
+              <LinkAnchor
+                aria-label="twitter link"
+                className="footer-icons"
+                href="/https://twitter.com/jelilabudu"
+                navigate={[Function]}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <a
+                  aria-label="twitter link"
+                  className="footer-icons"
+                  href="/https://twitter.com/jelilabudu"
+                  onClick={[Function]}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fab fa-twitter"
+                  />
+                </a>
+              </LinkAnchor>
+            </Link>
+          </div>
+          <div
+            className="copyright"
+          >
+            <span
+              className="copyright__copy"
+            >
+              © 2021
+            </span>
+          </div>
+        </div>
+      </footer>
+    </Router>
+  </Routes>
+</Provider>
+`;
