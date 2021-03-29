@@ -76,7 +76,7 @@ describe('Favorites', () => {
 
     test('renders the Favorites page correctly but with no favorite house', async () => {
       const favoriteHouses = await wrapper
-        .find('div.houses-container');
+        .find('div.favorite-houses');
       expect(favoriteHouses.text()).toMatch(/You have no favorite house.../i);
     });
 

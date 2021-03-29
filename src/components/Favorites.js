@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import houseImage from '../images/scott-webb-1ddol8rgUH8-unsplash.jpg';
 import userFavorites from '../redux/actions/favorite';
 import getHouses from '../redux/actions/houses';
+import { spyNoScroll } from '../helpers/dom';
 
 const FavoritesHouses = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const FavoritesHouses = () => {
 
   useEffect(() => {
     dispatch(getHouses());
+    spyNoScroll();
   }, []);
 
   useEffect(() => {
@@ -33,32 +35,45 @@ const FavoritesHouses = () => {
   }, []);
 
   const content = (
-    getFavoritesHouses(houses, favoriteHousesIds).length
-      ? (getFavoritesHouses(houses, favoriteHousesIds).map(house => (
-        <div key={house.id} className="card mb-3">
-          <img className="card-img-top" src={houseImage} alt={house.name} />
-          <div className="card-body">
-            <h5 className="card-title">{house.name}</h5>
-            <h5 className="card-title">{house.category}</h5>
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <button
-              type="button"
-              className="card-text"
-              onClick={() => handleRemoveFavorite(user.id, house.id)}
-            >
-              <small className="text-muted">unlike</small>
-            </button>
-          </div>
-        </div>
-      )))
-      : (<div>You have no favorite house...</div>)
+
+    <div className="container-fluid">
+      <div className="favorite-houses row g-2">
+        {getFavoritesHouses(houses, favoriteHousesIds).length
+          ? (getFavoritesHouses(houses, favoriteHousesIds).map(house => (
+            <div key={house.id} className="house col-12 col-lg-6 col-xlg-4 text-white position-relative">
+              <button
+                type="button"
+                aria-label="Remove from favorite list"
+                className="btn btn-unlike"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="remove from favorite list"
+                onClick={() => handleRemoveFavorite(user.id, house.id)}
+              >
+                <span className="material-icons">
+                  favorite
+                </span>
+              </button>
+              <div className="house-info">
+                <h2 className="display-5">{house.name}</h2>
+                <h2 className="display-5">{house.category}</h2>
+                <p className="lead">And an even wittier subheading.</p>
+              </div>
+              <img
+                className="img-fluid"
+                src={houseImage}
+                alt={house.name}
+              />
+            </div>
+
+          )))
+          : (<div className="col-12">You have no favorite house...</div>)}
+      </div>
+    </div>
+
   );
 
-  return (
-    <div className="houses-container">
-      {content}
-    </div>
-  );
+  return content;
 };
 
 export default FavoritesHouses;
