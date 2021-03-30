@@ -1,12 +1,9 @@
-// "use-state-if-mounted": "^1.0.4"
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/button-has-type */
+
 import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-/* eslint-disable consistent-return */
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
@@ -23,6 +20,7 @@ const required = value => {
       </div>
     );
   }
+  return null;
 };
 
 const validEmail = value => {
@@ -33,6 +31,8 @@ const validEmail = value => {
       </div>
     );
   }
+
+  return null;
 };
 
 const Register = () => {
@@ -78,6 +78,7 @@ const Register = () => {
 
     form.current.validateAll();
 
+    // eslint-disable-next-line no-underscore-dangle
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(register(name, email, password, passwordConfirm))
         .then(() => {
@@ -112,15 +113,17 @@ const Register = () => {
           {!successful && (
             <div>
               <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <Input
-                  type="text"
-                  className="form-control"
-                  name="name"
-                  value={name}
-                  onChange={onChangeName}
-                  validations={[required]}
-                />
+                <label htmlFor="name">
+                  Name
+                  <Input
+                    type="text"
+                    className="form-control"
+                    name="name"
+                    value={name}
+                    onChange={onChangeName}
+                    validations={[required]}
+                  />
+                </label>
               </div>
 
               <div className="form-group">
@@ -160,7 +163,11 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <button className="btn b btn-primary btn-block btn-submit" disabled={loading}>
+                <button
+                  type="submit"
+                  className="btn b btn-primary btn-block btn-submit"
+                  disabled={loading}
+                >
                   {loading && (
                   <span className="spinner-border spinner-border-sm" />
                   )}

@@ -1,13 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable react/prop-types */
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-/* eslint-disable consistent-return */
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
@@ -24,6 +19,8 @@ const required = value => {
       </div>
     );
   }
+
+  return null;
 };
 
 const Login = () => {
@@ -56,6 +53,7 @@ const Login = () => {
 
     form.current.validateAll();
 
+    // eslint-disable-next-line no-underscore-dangle
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(login(email, password))
         .then(() => {
@@ -110,7 +108,11 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-            <button className="btn btn-primary btn-block btn-submit" disabled={loading}>
+            <button
+              type="submit"
+              className="btn btn-primary btn-block btn-submit"
+              disabled={loading}
+            >
               {loading && (
                 <span className="spinner-border spinner-border-sm" />
               )}

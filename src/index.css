@@ -57,13 +57,19 @@ body {
   width: 100%;
 }
 
-.btn-like:hover,
 .btn-unlike {
   background-color: #ec5200;
 }
 
-.btn-unlike:hover,
 .btn-like {
+  background-color: lightgray;
+}
+
+.btn-like:hover {
+  background-color: #ec5200;
+}
+
+.btn-unlike:hover {
   background-color: lightgray;
 }
 

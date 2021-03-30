@@ -36,7 +36,7 @@ const FavoritesHouses = () => {
   const content = (
 
     <div className="container-fluid">
-      <div className="favorite-houses row g-2">
+      <div className="favorite-houses py-2 py-md-4 row g-3">
         {getFavoritesHouses(houses, favoriteHousesIds).length
           ? (getFavoritesHouses(houses, favoriteHousesIds).map(house => (
             <div key={house.id} className="house col-12 col-lg-6 col-xlg-4 text-white position-relative">
