@@ -97,7 +97,6 @@ const Routes = () => {
               <Route exact path="/signin" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/Favorites" component={Favorites} />
-              <Route path="/user" component={BoardUser} />
             </Switch>
           </div>
         </main>

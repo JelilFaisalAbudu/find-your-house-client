@@ -46,47 +46,47 @@ exports[` renders the Sign-up page without crashing 1`] = `
                     htmlFor="name"
                   >
                     Name
-                  </label>
-                  <Control(s)
-                    className="form-control"
-                    name="name"
-                    onChange={[Function]}
-                    type="text"
-                    validations={
-                      Array [
-                        [Function],
-                      ]
-                    }
-                    value=""
-                  >
-                    <s
+                    <Control(s)
                       className="form-control"
-                      error={
-                        <div
-                          className="alert alert-danger"
-                          role="alert"
-                        >
-                          This field is required!
-                        </div>
-                      }
                       name="name"
-                      onBlur={[Function]}
                       onChange={[Function]}
                       type="text"
+                      validations={
+                        Array [
+                          [Function],
+                        ]
+                      }
                       value=""
                     >
-                      <div>
-                        <input
-                          className="form-control"
-                          name="name"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </s>
-                  </Control(s)>
+                      <s
+                        className="form-control"
+                        error={
+                          <div
+                            className="alert alert-danger"
+                            role="alert"
+                          >
+                            This field is required!
+                          </div>
+                        }
+                        name="name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+                      >
+                        <div>
+                          <input
+                            className="form-control"
+                            name="name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </s>
+                    </Control(s)>
+                  </label>
                 </div>
                 <div
                   className="form-group"
@@ -242,6 +242,7 @@ exports[` renders the Sign-up page without crashing 1`] = `
                   <button
                     className="btn b btn-primary btn-block btn-submit"
                     disabled={false}
+                    type="submit"
                   >
                     <span
                       className="signup-text"
