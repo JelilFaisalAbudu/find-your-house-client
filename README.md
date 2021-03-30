@@ -29,7 +29,7 @@
 
 ## Screenshots
 
-![screenshot](src/images/find-house.jpg)
+![screenshot](src/images/find-your-house.jpg)
 
 ## Live Demo Link <a name = "live-demo"></a>
 
