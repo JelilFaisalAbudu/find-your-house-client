@@ -16,7 +16,6 @@ import Login from './Login';
 import Register from './Register';
 import Home from './Home';
 import Favorites from './Favorites';
-import BoardUser from './BoardUser';
 
 import './Routes.css';
 import SiteLogo from '../images/elcom1.png';
