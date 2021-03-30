@@ -160,7 +160,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <button className="btn b btn-primary btn-block" disabled={loading}>
+                <button className="btn b btn-primary btn-block btn-submit" disabled={loading}>
                   {loading && (
                   <span className="spinner-border spinner-border-sm" />
                   )}
