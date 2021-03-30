@@ -1,0 +1,50 @@
+.hero {
+  background: url('../images/hero.jpg') no-repeat center center fixed;
+  background-attachment: initial;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  filter: brightness(0.8);
+}
+
+.hero-text {
+  color: #fff;
+  text-align: left;
+}
+
+.hero__explore-btn {
+  background-color: #ec5200;
+  padding: 0.5em 3em;
+  border-radius: 2em;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.house-info {
+  position: absolute;
+  bottom: 0;
+  margin-left: 1em;
+}
+
+.house .house-info,
+.house .btn {
+  transition: display 2s ease-in-out;
+  display: none;
+  z-index: 10;
+}
+
+.house:hover .house-info,
+.house:hover .btn {
+  transition: display 2s ease-in-out;
+  display: unset;
+}
+
+.house img {
+  border-radius: 0.5em;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+}
+
+.house:hover img {
+  filter: brightness(0.6);
+}
