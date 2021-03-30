@@ -29,8 +29,7 @@
 
 ## Screenshots
 
-![screenshot]('./src/images/find-your-house.jpg')
-![screenshot]()
+![screenshot]('./src/images/find-house.jpg')
 
 ## Live Demo Link <a name = "live-demo"></a>
 
