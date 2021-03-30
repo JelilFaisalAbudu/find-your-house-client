@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import history from '../helpers/history';
 import { spyHeaderScroll } from '../helpers/dom';
 
-import houseImage from '../images/scott-webb-1ddol8rgUH8-unsplash.jpg';
 import userFavorites from '../redux/actions/favorite';
 import getHouses from '../redux/actions/houses';
 import './Home.css';
@@ -101,14 +100,14 @@ const Home = () => {
       <>
         <div className="hero position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
           <div className="hero-text col-md-5 p-lg-5 mx-auto my-5">
-            <h1 className="display-4 fw-normal">Punny headline</h1>
-            <p className="lead fw-normal">A landing page to boot. Jumpstart your marketing efforts with this example based on  marketing pages.</p>
-            <a className="btn btn-outline-secondary" to="#">Coming soon</a>
+            <h1 className="display-4 fw-normal">For you the real-estate enthusiast</h1>
+            <p className="lead fw-normal">Do you need a home design idea? We got you covered. Browse through rhe list and find your dream houses you want to own in the near future.</p>
+            <a className="btn hero__explore-btn" href="#houses">Explore</a>
           </div>
         </div>
 
         <div className="container-fluid">
-          <div className="houses-container py-2 py-md-4 row g-3">
+          <div id="houses" className="houses-container py-2 py-md-4 row g-3">
             {houses.length
               && (houses.map(house => (
                 <div key={house.id} className="house col-12 col-lg-6 col-xlg-4 text-white position-relative">
@@ -116,11 +115,11 @@ const Home = () => {
                   <div className="house-info">
                     <h2 className="display-6">{house.name}</h2>
                     <h3 className="display-7">{house.category}</h3>
-                    <p className="lead">And an even wittier subheading.</p>
+                    <p className="lead">{house.description}</p>
                   </div>
                   <img
                     className="img-fluid"
-                    src={houseImage}
+                    src={house.photo_url}
                     alt={house.name}
                   />
                 </div>

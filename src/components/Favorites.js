@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import houseImage from '../images/scott-webb-1ddol8rgUH8-unsplash.jpg';
 import userFavorites from '../redux/actions/favorite';
 import getHouses from '../redux/actions/houses';
 import { spyNoScroll } from '../helpers/dom';
@@ -55,19 +54,23 @@ const FavoritesHouses = () => {
                 </span>
               </button>
               <div className="house-info">
-                <h2 className="display-5">{house.name}</h2>
-                <h2 className="display-5">{house.category}</h2>
-                <p className="lead">And an even wittier subheading.</p>
+                <h2 className="display-6">{house.name}</h2>
+                <h3 className="display-7">{house.category}</h3>
+                <p className="lead">{house.description}</p>
               </div>
               <img
                 className="img-fluid"
-                src={houseImage}
+                src={house.photo_url}
                 alt={house.name}
               />
             </div>
 
           )))
-          : (<div className="col-12">You have no favorite house...</div>)}
+          : (
+            <div className="col-12 text-center display-6">
+              You have no favorite house...
+            </div>
+          )}
       </div>
     </div>
 
