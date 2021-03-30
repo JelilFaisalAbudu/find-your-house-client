@@ -29,7 +29,7 @@
 
 ## Screenshots
 
-![screenshot]('./src/images/find-house.jpg')
+![screenshot](src/images/find-house.jpg)
 
 ## Live Demo Link <a name = "live-demo"></a>
 
@@ -117,8 +117,9 @@ Feel free to check the [issues page]().
 Give a ⭐️ if you like this project!
 
 ## :clap: Acknowledgements
-- [Design Work](https://www.behance.net/alexey_savitskiy)
-- [Microverse](https://www.microverse.org/)
+- [Microverse Coding School](https://www.microverse.org/)
+- [Design Work: Alexey Savitskiy](https://www.behance.net/alexey_savitskiy)
+- [Photos: Unsplash](https://unsplash.com)
 
 ## 📝 License
 
