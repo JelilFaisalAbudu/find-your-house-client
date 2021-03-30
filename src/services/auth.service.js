@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/api/v1/';
+const API_URL = 'https://findyourhouseapi.herokuapp.com/api/v1/';
 
 const login = async (email, password) => {
   const response = await axios
