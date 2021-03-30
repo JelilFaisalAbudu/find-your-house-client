@@ -22,18 +22,18 @@ exports[`Home renders without crashing 1`] = `
         <h1
           className="display-4 fw-normal"
         >
-          Punny headline
+          For you the real-estate enthusiast
         </h1>
         <p
           className="lead fw-normal"
         >
-          A landing page to boot. Jumpstart your marketing efforts with this example based on  marketing pages.
+          Do you need a home design idea? We got you covered. Browse through rhe list and find your dream houses you want to own in the near future.
         </p>
         <a
-          className="btn btn-outline-secondary"
-          to="#"
+          className="btn hero__explore-btn"
+          href="#houses"
         >
-          Coming soon
+          Explore
         </a>
       </div>
     </div>
@@ -42,6 +42,7 @@ exports[`Home renders without crashing 1`] = `
     >
       <div
         className="houses-container py-2 py-md-4 row g-3"
+        id="houses"
       >
         0
       </div>

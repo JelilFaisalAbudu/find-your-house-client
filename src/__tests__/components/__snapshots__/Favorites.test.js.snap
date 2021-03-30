@@ -20,7 +20,7 @@ exports[`Favorites renders without crashing 1`] = `
         className="favorite-houses row g-2"
       >
         <div
-          className="col-12"
+          className="col-12 text-center display-6"
         >
           You have no favorite house...
         </div>

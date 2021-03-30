@@ -240,7 +240,7 @@ exports[` renders the Sign-up page without crashing 1`] = `
                   className="form-group"
                 >
                   <button
-                    className="btn b btn-primary btn-block"
+                    className="btn b btn-primary btn-block btn-submit"
                     disabled={false}
                   >
                     <span
