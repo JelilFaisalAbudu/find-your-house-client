@@ -5,10 +5,20 @@
   -moz-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
+  filter: brightness(0.8);
 }
 
 .hero-text {
   color: #fff;
+  text-align: left;
+}
+
+.hero__explore-btn {
+  background-color: #ec5200;
+  padding: 0.5em 3em;
+  border-radius: 2em;
+  color: #fff;
+  font-size: 1.3rem;
 }
 
 .house-info {
