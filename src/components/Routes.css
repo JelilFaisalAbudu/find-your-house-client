@@ -1,0 +1,108 @@
+.site-header {
+  position: absolute;
+  padding: 1.5em 0;
+  width: 100%;
+  z-index: 1020;
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+  margin-right: 2em;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  border-radius: 2.4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em 1.5em !important;
+  text-transform: uppercase;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #7b7b77;
+}
+
+.navbar-brand .brand-logo {
+  height: 4rem;
+}
+
+.navbar-brand:hover {
+  background-color: #f037099b;
+}
+
+.remove-absolute {
+  background-color: currentColor;
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+  transition: position 0.3s;
+}
+
+.footer__social {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.footer-icons {
+  margin: 0.7em;
+}
+
+.fa,
+.fab {
+  font-size: 2rem;
+}
+
+.fa-twitter {
+  background-color: #00aff1;
+  color: #fff;
+}
+
+.fa-github {
+  background-color: rgb(83, 82, 82);
+  color: #fff;
+}
+
+.fa-linkedin-in {
+  color: white;
+  background-color: #0a66c2;
+}
+
+.footer-icons i {
+  font-size: 1.8rem;
+  border-radius: 50%;
+  padding: 0.3em;
+}
+
+.footer-icons i:hover {
+  background-color: #7b7b77;
+}
+
+.copyright__copy {
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .developed-by {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-header--bg {
+    background-color: currentColor;
+    opacity: 0.9;
+  }
+
+  .site-header {
+    position: unset;
+  }
+
+  .navbar-toggler {
+    color: white;
+    background-color: white;
+  }
+}

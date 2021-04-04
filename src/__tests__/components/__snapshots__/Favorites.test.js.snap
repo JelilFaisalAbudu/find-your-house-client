@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favorites renders without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <FavoritesHouses>
+    <div
+      className="container-fluid"
+    >
+      <div
+        className="favorite-houses py-2 py-md-4 row g-3"
+      >
+        <div
+          className="col-12 text-center display-6"
+        >
+          You have no favorite house...
+        </div>
+      </div>
+    </div>
+  </FavoritesHouses>
+</Provider>
+`;

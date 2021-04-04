@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` renders the Sign-up page without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Register>
+    <div
+      className="col-md-12"
+    >
+      <div
+        className="card card-container"
+      >
+        <img
+          alt="profile-img"
+          className="profile-img-card"
+          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+        />
+        <Form(t)
+          onSubmit={[Function]}
+        >
+          <t
+            getValues={[Function]}
+            hideError={[Function]}
+            onSubmit={[Function]}
+            showError={[Function]}
+            validate={[Function]}
+            validateAll={[Function]}
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <div>
+                <div
+                  className="form-group"
+                >
+                  <label
+                    htmlFor="name"
+                  >
+                    Name
+                    <Control(s)
+                      className="form-control"
+                      name="name"
+                      onChange={[Function]}
+                      type="text"
+                      validations={
+                        Array [
+                          [Function],
+                        ]
+                      }
+                      value=""
+                    >
+                      <s
+                        className="form-control"
+                        error={
+                          <div
+                            className="alert alert-danger"
+                            role="alert"
+                          >
+                            This field is required!
+                          </div>
+                        }
+                        name="name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+                      >
+                        <div>
+                          <input
+                            className="form-control"
+                            name="name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </s>
+                    </Control(s)>
+                  </label>
+                </div>
+                <div
+                  className="form-group"
+                >
+                  <label
+                    htmlFor="email"
+                  >
+                    Email
+                  </label>
+                  <Control(s)
+                    className="form-control"
+                    name="email"
+                    onChange={[Function]}
+                    type="text"
+                    validations={
+                      Array [
+                        [Function],
+                        [Function],
+                      ]
+                    }
+                    value=""
+                  >
+                    <s
+                      className="form-control"
+                      error={
+                        <div
+                          className="alert alert-danger"
+                          role="alert"
+                        >
+                          This field is required!
+                        </div>
+                      }
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    >
+                      <div>
+                        <input
+                          className="form-control"
+                          name="email"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </s>
+                  </Control(s)>
+                </div>
+                <div
+                  className="form-group"
+                >
+                  <label
+                    htmlFor="password"
+                  >
+                    Password
+                  </label>
+                  <Control(s)
+                    className="form-control"
+                    name="password"
+                    onChange={[Function]}
+                    type="password"
+                    validations={
+                      Array [
+                        [Function],
+                      ]
+                    }
+                    value=""
+                  >
+                    <s
+                      className="form-control"
+                      error={
+                        <div
+                          className="alert alert-danger"
+                          role="alert"
+                        >
+                          This field is required!
+                        </div>
+                      }
+                      name="password"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="password"
+                      value=""
+                    >
+                      <div>
+                        <input
+                          className="form-control"
+                          name="password"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="password"
+                          value=""
+                        />
+                      </div>
+                    </s>
+                  </Control(s)>
+                </div>
+                <div
+                  className="form-group"
+                >
+                  <label
+                    htmlFor="passwordConfirm"
+                  >
+                    Password Confirmation
+                  </label>
+                  <Control(s)
+                    className="form-control"
+                    name="passwordConfirm"
+                    onChange={[Function]}
+                    type="password"
+                    validations={
+                      Array [
+                        [Function],
+                      ]
+                    }
+                    value=""
+                  >
+                    <s
+                      className="form-control"
+                      error={
+                        <div
+                          className="alert alert-danger"
+                          role="alert"
+                        >
+                          This field is required!
+                        </div>
+                      }
+                      name="passwordConfirm"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="password"
+                      value=""
+                    >
+                      <div>
+                        <input
+                          className="form-control"
+                          name="passwordConfirm"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="password"
+                          value=""
+                        />
+                      </div>
+                    </s>
+                  </Control(s)>
+                </div>
+                <div
+                  className="form-group"
+                >
+                  <button
+                    className="btn b btn-primary btn-block btn-submit"
+                    disabled={false}
+                    type="submit"
+                  >
+                    <span
+                      className="signup-text"
+                    >
+                      Sign Up
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <Button(s)
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }
+              >
+                <s
+                  hasErrors={true}
+                  style={
+                    Object {
+                      "display": "none",
+                    }
+                  }
+                >
+                  <button
+                    disabled={true}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                  />
+                </s>
+              </Button(s)>
+            </form>
+          </t>
+        </Form(t)>
+      </div>
+    </div>
+  </Register>
+</Provider>
+`;
