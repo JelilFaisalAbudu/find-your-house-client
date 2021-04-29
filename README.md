@@ -3,7 +3,8 @@
 ## Overview
 
 >The **FIND YOUR HOUSE** is a real estate web app that displays a list of houses for house enthusiasts to view. User can choose to save their favorite homes and come back view them later.
-> The data is served from the API built using Ruby on Rails framework.
+>The data is served from the API built using Ruby on Rails framework.
+>
 <div align="center">
 
 [![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/JelilFaisalAbudu/find-your-house-client)
